@@ -1,0 +1,35 @@
+<ion-view view-title="Settings">
+
+    <ion-content class="padding">
+
+        <ion-list class="list-inset">
+
+            <div class="item">
+                <h2 class="text-center currency-label">Currency 1</h2>
+                <label class="item item-input">
+                    <input type="text" value="HKD" class="text-center" ng-disabled="true">
+                </label>
+            </div>
+
+            <div class="item">
+                <h2 class="text-center currency-label">Currency 2</h2>
+                <label class="item item-input">
+                    <input type="text" value="YEN" class="text-center" ng-disabled="true">
+                </label>
+            </div>
+
+            <div class="item">
+                <h2 class="text-center currency-label">Input Exchange Rate:</h2>
+                <label class="item item-input">
+                    <input type="text" placeholder="How many HKD to buy 100YEN"
+                           ng-model="exchange.rate" ng-change="setRate()" class="text-center">
+                </label>
+                <button class="button button-positive button-block"
+                        ng-click="getTodaysRate()">Get today's rate online</button>
+            </div>
+
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

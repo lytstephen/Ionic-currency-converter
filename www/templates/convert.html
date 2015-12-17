@@ -1,0 +1,47 @@
+<ion-view view-title="Convert">
+    <ion-content class="padding">
+
+        <ion-list class="list-inset">
+
+            <ion-item class="item-text-wrap item-icon-left"
+                    ng-click="showSettings()">
+                <i class="icon ion-gear-b"></i>
+                <h2>Set Your exchange rate in the Settings Tab.</h2>
+            </ion-item>
+
+        </ion-list>
+
+        <ion-list class="list-inset">
+
+            <div class="item item-divider">
+                <p class="text-center">Exchange Rate: {{exchange.rate}}HKD to 100JPY</p>
+            </div>
+
+            <div class="item">
+                <h2 class="text-center currency-label">HKD</h2>
+                <label class="item item-input">
+                    <input type="tel" placeholder="Enter Amount"
+                            ng-model="convert.cur1" ng-focus="clearFields()" ng-change="calcCur2()">
+                </label>
+            </div>
+
+            <div class="item text-center">
+                <h2><i class="ion-arrow-up-c"></i>
+                <i class="ion-arrow-down-c"></i></h2>
+            </div>
+
+            <div class="item">
+                <h2 class="text-center currency-label">YEN</h2>
+                <label class="item item-input">
+                    <input type="tel" placeholder="Enter Amount"
+                            ng-model="convert.cur2" ng-focus="clearFields()" ng-change="calcCur1()">
+                </label>
+            </div>
+
+            <div class="item item-divider">
+            </div>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>
